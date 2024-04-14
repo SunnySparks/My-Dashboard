@@ -9,7 +9,7 @@ const Weather = () => {
   const fetchWeatherData = async () => {
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${process.env.API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.API_KEY}`
       );
       console.log(response.data);
       setWeatherData(response.data);
@@ -26,12 +26,6 @@ const Weather = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter country code"
-          value={country}
-          onChange={(event) => setCountry(event.target.value)}
-        />
         <input
           type="text"
           placeholder="Enter city name"
