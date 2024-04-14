@@ -3,7 +3,7 @@ import React from "react";
 import Calculator from "../Calculator/Calculator";
 import TodoContainer from "../Todo/TodoContainer";
 import Calendar from "../Calendar/Calendar";
-//import Weather from "../Weather/Weather";
+import Weather from "../Weather/Weather";
 
 const Layout = ({ children, navOptions = [] }) => {
   return (
@@ -13,8 +13,8 @@ const Layout = ({ children, navOptions = [] }) => {
       <Calculator />
       <TodoContainer />
       <Calendar />
-      {/*//<Weather />
-      //<main>{children}</main>
+      <Weather />
+      {/*//<main>{children}</main>
       /* <Style></Style> */}
     </>
   );
